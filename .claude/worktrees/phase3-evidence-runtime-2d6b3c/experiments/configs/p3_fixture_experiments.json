@@ -1,0 +1,6 @@
+{
+  "seed": 20261112,
+  "g1": {"seed": 1, "seeds_per_kind": 10, "fault_rates": [0.0, 0.1, 0.25, 0.5]},
+  "v1": {"seed": 2, "seeds_per_kind": 10, "fault_rate": 0.3},
+  "o1": {"seed": 3, "seeds_per_kind": 10, "max_steps": [3, 4, 5, 6, 8]}
+}

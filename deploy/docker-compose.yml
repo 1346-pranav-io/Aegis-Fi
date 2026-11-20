@@ -1,0 +1,13 @@
+# Local development only (U-08). Schema is applied by backend/scripts/migrate.py, not initdb. Dev credentials below are NOT for any shared environment.
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: aegis
+      POSTGRES_USER: aegis_migrator
+      POSTGRES_PASSWORD: ${AEGIS_PG_ADMIN_PASSWORD:-dev-only-change-me}
+    ports: ["127.0.0.1:5432:5432"]
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:

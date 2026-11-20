@@ -1,0 +1,122 @@
+{
+  "edges": 5078345,
+  "accounts": 515088,
+  "index_build_s": 1.0929999999934807,
+  "latency_random_centres_ms": {
+    "n": 1500,
+    "p50": 1.445450005121529,
+    "p95": 106.95052500159363,
+    "p99": 159.77131101404663,
+    "max": 565.5278000049293,
+    "ego_edges_p50": 17.0,
+    "ego_edges_p95": 4656.249999999999,
+    "truncated_fraction": 0.10533333333333333,
+    "hub_centres_in_sample": 128
+  },
+  "latency_top30_hubs_ms": {
+    "p50": 37.40780000225641,
+    "max": 136.4464000071166,
+    "truncated_fraction": 0.16666666666666666,
+    "max_degree": 169756
+  },
+  "networkx_whole_graph_build": {
+    "100000": {
+      "build_s": 1.215410899996641,
+      "peak_mb": 78.280712,
+      "nodes": 105585
+    },
+    "500000": {
+      "build_s": 5.5082603999908315,
+      "peak_mb": 252.181056,
+      "nodes": 327325
+    },
+    "1500000": {
+      "build_s": 17.39858660000027,
+      "peak_mb": 464.654048,
+      "nodes": 474156
+    }
+  },
+  "block_validation_oracle_windowed": {
+    "FAN-OUT": {
+      "n": 48,
+      "cycle_found_rate": 0.2916666666666667,
+      "median_out_distinct": 7.5,
+      "median_in_distinct": 2.0,
+      "median_flow_through": 0.0,
+      "median_scc_size": 1.0,
+      "truncated_fraction": 0.1875
+    },
+    "CYCLE": {
+      "n": 54,
+      "cycle_found_rate": 0.5740740740740741,
+      "median_out_distinct": 2.0,
+      "median_in_distinct": 2.0,
+      "median_flow_through": 0.0,
+      "median_scc_size": 2.0,
+      "truncated_fraction": 0.09259259259259259
+    },
+    "GATHER-SCATTER": {
+      "n": 51,
+      "cycle_found_rate": 0.35294117647058826,
+      "median_out_distinct": 2.0,
+      "median_in_distinct": 2.0,
+      "median_flow_through": 0.0,
+      "median_scc_size": 1.0,
+      "truncated_fraction": 0.17647058823529413
+    },
+    "STACK": {
+      "n": 43,
+      "cycle_found_rate": 0.32558139534883723,
+      "median_out_distinct": 2.0,
+      "median_in_distinct": 1.0,
+      "median_flow_through": 0.0,
+      "median_scc_size": 1.0,
+      "truncated_fraction": 0.09302325581395349
+    },
+    "RANDOM": {
+      "n": 41,
+      "cycle_found_rate": 0.2926829268292683,
+      "median_out_distinct": 2.0,
+      "median_in_distinct": 2.0,
+      "median_flow_through": 0.0,
+      "median_scc_size": 1.0,
+      "truncated_fraction": 0.1951219512195122
+    },
+    "BIPARTITE": {
+      "n": 49,
+      "cycle_found_rate": 0.2653061224489796,
+      "median_out_distinct": 2.0,
+      "median_in_distinct": 1.0,
+      "median_flow_through": 0.0,
+      "median_scc_size": 1.0,
+      "truncated_fraction": 0.10204081632653061
+    },
+    "FAN-IN": {
+      "n": 40,
+      "cycle_found_rate": 0.3,
+      "median_out_distinct": 1.0,
+      "median_in_distinct": 9.5,
+      "median_flow_through": 0.0,
+      "median_scc_size": 1.0,
+      "truncated_fraction": 0.125
+    },
+    "SCATTER-GATHER": {
+      "n": 44,
+      "cycle_found_rate": 0.3181818181818182,
+      "median_out_distinct": 7.0,
+      "median_in_distinct": 1.0,
+      "median_flow_through": 0.0,
+      "median_scc_size": 1.0,
+      "truncated_fraction": 0.20454545454545456
+    },
+    "CONTROL(random accounts)": {
+      "n": 600,
+      "cycle_found_rate": 0.005,
+      "median_out_distinct": 2.0,
+      "median_in_distinct": 1.0,
+      "median_flow_through": 0.0,
+      "median_scc_size": 1.0,
+      "truncated_fraction": 0.2
+    }
+  }
+}

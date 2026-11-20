@@ -1,0 +1,98 @@
+{
+  "0001_source_schema.sql": {
+    "status": "approved",
+    "decision": "D-04 / owner authorised Phase 1",
+    "by": "owner",
+    "on": "2026-11-11",
+    "note": "Created under the owner's approval of D-04 and Phase 1 start (2026-11-11).",
+    "sha256": "a6c399a82dc5c76f0cbb900b3586c94b372bd6f4f9cf62d66ddbd5c0288eb00d"
+  },
+  "0002_currency_text.sql": {
+    "status": "retroactive",
+    "decision": "none",
+    "by": "architect (disclosure)",
+    "on": "2026-11-11",
+    "note": "ALTER COLUMN TYPE on a source table, applied before the approval process existed; disclosed in decisions.md; NOT approved in advance.",
+    "sha256": "8fa1d55bf94982348520ce1dadaa7896f70ad2f151b52f041531ea9dc54a7977"
+  },
+  "0003_label_lookup_index.sql": {
+    "status": "approved",
+    "decision": "Phase 1 authorisation",
+    "by": "owner",
+    "on": "2026-11-11",
+    "note": "Index only; matches the protected pattern because it references source.",
+    "sha256": "94e2c8098796329fa0feeb7c64ea8b3a54cac3ab9eac500776601774efda95dd"
+  },
+  "0004_batch_state_machine.sql": {
+    "status": "approved",
+    "decision": "owner reply 'Yes, fix them' (S-1,S-2,S-3,S-5)",
+    "by": "owner",
+    "on": "2026-11-11",
+    "note": "Batch state machine, audit on transitions.",
+    "sha256": "aa8022a79eaf4c65c8e4a5a476e2767736b0e6fa9df87f2ff9e7eddb48ee5292"
+  },
+  "0005_audit_definer.sql": {
+    "status": "approved",
+    "decision": "owner reply 'Fix both now' (S-4/M-3, H-1)",
+    "by": "owner",
+    "on": "2026-11-11",
+    "note": "SECURITY DEFINER audit writer; revoke direct audit INSERT.",
+    "sha256": "0fed35985517c978e0029d0716f593c202b36a198bd124d42cff4f9050d37453"
+  },
+  "0006_alerts_cases.sql": {
+    "status": "approved",
+    "decision": "owner reply 'Alerts/cases workflow' (Phase 2 scope: FR-DET-05, FR-CASE-*, D-09)",
+    "by": "owner",
+    "on": "2026-11-11",
+    "note": "New derived/workflow schemas, insert-only signal/alert/approval tables, guarded case state machine with approval gate.",
+    "sha256": "bc84a24b7ff47fe244dd6d10c44a5c7a4e73550bc9b4010cb6acb8ade758fe28"
+  },
+  "0007_approval_hardening.sql": {
+    "status": "approved",
+    "decision": "owner reply 'Approve 0007' (Phase 2 review H-1, M-1, M-2, L-1)",
+    "by": "owner",
+    "on": "2026-11-11",
+    "note": "Separate approver login role, DB-bound identities, requester!=decider, audited case column changes, approval must follow PENDING_REVIEW, reason cap.",
+    "sha256": "e813fe02b32c76c68e9c44453c979e48b515862a79be7a935326ab327517d1fa"
+  },
+  "0008_bump_and_audit_hardening.sql": {
+    "status": "approved",
+    "decision": "owner reply 'Build 0008' (Phase 2 re-review NEW-1, NEW-2, NEW-3)",
+    "by": "owner",
+    "on": "2026-11-12",
+    "note": "bump_case validated and audited, case insert guard, finite scores, audit.record_app allow-list prefix, approval audit rows. NEW-4/5 left open. The app. prefix rule for NEW-3 was my design choice, flagged to the owner.",
+    "sha256": "0ec31fd9f2f6d36070a4f379932670db2f71b9806006ab186351d89669de1539"
+  },
+  "0009_evidence_schema.sql": {
+    "status": "approved",
+    "decision": "owner reply 'Start phase 3 and phase 4 together' - shared contract slice (EVIDENCE_MODEL.md, approved architecture)",
+    "by": "owner",
+    "on": "2026-11-12",
+    "note": "Evidence/claim/verification/contradiction tables from the approved EVIDENCE_MODEL; insert-only with cross-row rules. The owner approved starting the phases, not this migration's text specifically; flagged in decisions.md for review.",
+    "sha256": "c0a930f2dcec3766af9ff948d765deadd23d149c419acc84cf0986189ae01f69"
+  },
+  "0020_entity_resolution.sql": {
+    "status": "approved",
+    "decision": "owner chat instruction 'please go ahead with it' (Phase 4 migrations)",
+    "by": "owner",
+    "on": "2026-11-12",
+    "note": "ER mentions/entities/links/merges: insert-only, audited, exact-ID-only auto-confirm, ENTITY_MERGE approval required.",
+    "sha256": "079611165bebdd7865f4183ee8d6dec476ff922d6afd5ace84c50552b1470a53"
+  },
+  "0021_contradiction_fingerprint.sql": {
+    "status": "approved",
+    "decision": "owner chat instruction 'please go ahead with it' (Phase 4 migrations)",
+    "by": "owner",
+    "on": "2026-11-12",
+    "note": "Unique fingerprint index on evidence.contradiction (idempotent recording).",
+    "sha256": "31b34db2119bb2a26f5ac358ed91fed4a18436c28b5edcc4736f7b0b57ba9c9c"
+  },
+  "0022_contradiction_closure_gate.sql": {
+    "status": "approved",
+    "decision": "owner chat instruction 'please go ahead with it' (Phase 4 migrations)",
+    "by": "owner",
+    "on": "2026-11-12",
+    "note": "case_guard replaced: 0008 body plus no CLOSED while an OPEN HIGH contradiction exists. Security review requested.",
+    "sha256": "5685707ec30892ddb5945072463665acab1be92ce255992051d3aad8f79b0247"
+  }
+}

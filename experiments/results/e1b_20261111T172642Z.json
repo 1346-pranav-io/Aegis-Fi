@@ -1,0 +1,183 @@
+{
+  "dataset": "IBM-AML-HI-Small",
+  "as_of": "2026-11-11T17:25:17.949098+00:00",
+  "split_hash": "465b7276ab89a0154ed88a77d5a24a3940d47ac1cf709f7e501c452129ebbfeb",
+  "dataset_manifest_hash": "f9f71c4012eac4f91b8d6dd7d4036d4bbfc53c0119ca02bb10f22cce3f9f7810",
+  "feature_set_version": "txnfeat-v1",
+  "rule_pack": {
+    "version": "rules-v2",
+    "rules": [
+      {
+        "name": "FAN_OUT_24H",
+        "threshold": 18.0,
+        "weight": 0.4573612681533282
+      },
+      {
+        "name": "FAN_IN_24H",
+        "threshold": 7.0,
+        "weight": 0.47128915653479525
+      },
+      {
+        "name": "VELOCITY_1H",
+        "threshold": 172.0,
+        "weight": 0.656458486549711
+      },
+      {
+        "name": "RAPID_FLOW_THROUGH",
+        "threshold": null,
+        "weight": 0.0
+      },
+      {
+        "name": "REVERSE_FLOW",
+        "threshold": 5.0,
+        "weight": 0.4311460137735905
+      },
+      {
+        "name": "NEW_COUNTERPARTY_LARGE",
+        "threshold": 0.10199878294099039,
+        "weight": 1.0993516248380486
+      },
+      {
+        "name": "FRESH_DEST",
+        "threshold": 6.0,
+        "weight": 0.04521291817471776
+      },
+      {
+        "name": "FRESH_ORIGIN",
+        "threshold": 2.0,
+        "weight": 0.42362512066944386
+      }
+    ]
+  },
+  "metrics": {
+    "validation": {
+      "n": 965524,
+      "positives": 1036,
+      "base_rate": 0.0010729924890525767,
+      "pr_auc": 0.0037276038259107746,
+      "roc_auc": 0.792126338505998,
+      "recall_at_k": {
+        "100": 0.0,
+        "500": 0.0,
+        "1000": 0.0,
+        "5000": 0.01447876447876448
+      },
+      "precision_at_k": {
+        "100": 0.0,
+        "500": 0.0,
+        "1000": 0.0,
+        "5000": 0.003
+      },
+      "distinct_scores": 30
+    },
+    "test": {
+      "n": 862792,
+      "positives": 956,
+      "base_rate": 0.0011080306725143488,
+      "pr_auc": 0.0037591507302251904,
+      "roc_auc": 0.7590847964142953,
+      "recall_at_k": {
+        "100": 0.0,
+        "500": 0.0020920502092050207,
+        "1000": 0.0031380753138075313,
+        "5000": 0.0198744769874477
+      },
+      "precision_at_k": {
+        "100": 0.0,
+        "500": 0.004,
+        "1000": 0.003,
+        "5000": 0.0038
+      },
+      "distinct_scores": 33
+    },
+    "stress": {
+      "n": 1108,
+      "positives": 655,
+      "base_rate": 0.5911552346570397,
+      "pr_auc": 0.7137229876401823,
+      "roc_auc": 0.5914362266821698,
+      "recall_at_k": {
+        "10": 0.013740458015267175,
+        "50": 0.05648854961832061,
+        "100": 0.1251908396946565,
+        "500": 0.5083969465648855
+      },
+      "precision_at_k": {
+        "10": 0.9,
+        "50": 0.74,
+        "100": 0.82,
+        "500": 0.666
+      },
+      "distinct_scores": 15
+    }
+  },
+  "per_rule": {
+    "FAN_OUT_24H": {
+      "enabled": true,
+      "threshold": 18.0,
+      "weight": 0.4573612681533282,
+      "train_fires": 334065,
+      "test_fires": 104289,
+      "test_precision": 0.0011985923731170113,
+      "test_recall": 0.1307531380753138
+    },
+    "FAN_IN_24H": {
+      "enabled": true,
+      "threshold": 7.0,
+      "weight": 0.47128915653479525,
+      "train_fires": 165123,
+      "test_fires": 62080,
+      "test_precision": 0.0014497422680412372,
+      "test_recall": 0.09414225941422594
+    },
+    "VELOCITY_1H": {
+      "enabled": true,
+      "threshold": 172.0,
+      "weight": 0.656458486549711,
+      "train_fires": 162522,
+      "test_fires": 47619,
+      "test_precision": 0.001575001575001575,
+      "test_recall": 0.07845188284518828
+    },
+    "RAPID_FLOW_THROUGH": {
+      "enabled": false
+    },
+    "REVERSE_FLOW": {
+      "enabled": true,
+      "threshold": 5.0,
+      "weight": 0.4311460137735905,
+      "train_fires": 33376,
+      "test_fires": 15956,
+      "test_precision": 0.002068187515668087,
+      "test_recall": 0.034518828451882845
+    },
+    "NEW_COUNTERPARTY_LARGE": {
+      "enabled": true,
+      "threshold": 0.10199878294099039,
+      "weight": 1.0993516248380486,
+      "train_fires": 245093,
+      "test_fires": 21096,
+      "test_precision": 0.012135001896094046,
+      "test_recall": 0.26778242677824265
+    },
+    "FRESH_DEST": {
+      "enabled": true,
+      "threshold": 6.0,
+      "weight": 0.04521291817471776,
+      "train_fires": 1704846,
+      "test_fires": 78420,
+      "test_precision": 0.004641673042591176,
+      "test_recall": 0.3807531380753138
+    },
+    "FRESH_ORIGIN": {
+      "enabled": true,
+      "threshold": 2.0,
+      "weight": 0.42362512066944386,
+      "train_fires": 924769,
+      "test_fires": 92134,
+      "test_precision": 0.0035274708576638375,
+      "test_recall": 0.3399581589958159
+    }
+  },
+  "mlflow_run_id": "2c664a8ecc21481db9bbc91064cdab5c"
+}

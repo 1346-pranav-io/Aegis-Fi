@@ -1,0 +1,10 @@
+{
+  "name": "ibm_hi_small_split_v1",
+  "dataset": "IBM-AML-HI-Small",
+  "windows": [
+    {"part": "train",      "start": "2022-09-01T00:00:00Z", "end": "2022-09-07T00:00:00Z"},
+    {"part": "validation", "start": "2022-09-07T00:00:00Z", "end": "2022-09-09T00:00:00Z"},
+    {"part": "test",       "start": "2022-09-09T00:00:00Z", "end": "2022-09-11T00:00:00Z"},
+    {"part": "stress",     "start": "2022-09-11T00:00:00Z", "end": "2022-09-19T00:00:00Z"}
+  ]
+}

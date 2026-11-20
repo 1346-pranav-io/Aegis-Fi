@@ -1,0 +1,23 @@
+{
+  "started": "2026-11-12T20:01:16.422866+00:00",
+  "sql_copy_s": 20.724212799999805,
+  "csv_bytes": 569740863,
+  "csv_parse_s": 4.0572098000047845,
+  "rows": 5078345,
+  "factorize_s": 2.300627300006454,
+  "load_transactions_total_s": 42.69891530000314,
+  "build_features_s": 19.45313310000347,
+  "feature_columns": 23,
+  "feature_memory_mb": 934.415612,
+  "frame_memory_mb": 786.032503,
+  "queue_status": 200,
+  "queue_items": 0,
+  "api_queue_limit500": {
+    "p50_ms": 30.904149996786145,
+    "p95_ms": 46.02479999666684
+  },
+  "api_queue_limit100": {
+    "p50_ms": 33.02475000236882,
+    "p95_ms": 48.49211499895318
+  }
+}

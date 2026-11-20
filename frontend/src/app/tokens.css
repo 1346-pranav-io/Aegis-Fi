@@ -1,0 +1,44 @@
+/* Aegis-FI design tokens (D-37). Near-black and white surfaces, one green accent, blue/amber/violet for chart series,
+   status colours only for status. Two radii: --r for controls, --rc for cards. Light and dark share every token. */
+:root {
+  --r: 8px;
+  --rc: 12px;
+  --sidebar: 244px;
+  --sidebar-min: 68px;
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --surface-2: #f0f1f4;
+  --line: #e3e5ea;
+  --line-strong: #cdd1d9;
+  --text: #15171c;
+  --muted: #5d6573;
+  --accent: #15803d;
+  --accent-ink: #ffffff;
+  --accent-soft: #dcf5e4;
+  --blue: #0369a1; --amber: #b45309; --violet: #6d28d9; --rose: #be123c;
+  --ok: #15803d;   --ok-bg: #dcf5e4;
+  --warn: #92400e; --warn-bg: #fdecc8;
+  --bad: #b91c1c;  --bad-bg: #fde2e2;
+  --shadow: 0 1px 2px rgb(16 24 40 / 0.04), 0 1px 1px rgb(16 24 40 / 0.03);
+  --c-open: #7c8696; --c-inv: var(--blue); --c-pend: var(--amber); --c-closed: var(--ok);
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --bg: #09090b;
+  --surface: #101013;
+  --surface-2: #17171b;
+  --line: #222227;
+  --line-strong: #33333a;
+  --text: #f4f4f5;
+  --muted: #9b9ba5;
+  --accent: #34d27b;
+  --accent-ink: #04140b;
+  --accent-soft: #0f2a1a;
+  --blue: #38bdf8; --amber: #fbbf24; --violet: #a78bfa; --rose: #fb7185;
+  --ok: #4ade80;   --ok-bg: #0f2a1a;
+  --warn: #fbbf24; --warn-bg: #2c2208;
+  --bad: #f87171;  --bad-bg: #331414;
+  --shadow: 0 1px 0 rgb(0 0 0 / 0.4);
+  --c-open: #6b7280;
+  color-scheme: dark;
+}

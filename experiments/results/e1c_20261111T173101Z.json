@@ -1,0 +1,44 @@
+{
+  "criteria": {
+    "roc_auc_within": [
+      0.47,
+      0.53
+    ],
+    "pr_auc_max_x_base": 2.0
+  },
+  "split_hash": "465b7276ab89a0154ed88a77d5a24a3940d47ac1cf709f7e501c452129ebbfeb",
+  "runs": [
+    {
+      "permutation_seed": 101,
+      "trees": 9,
+      "test_pr_auc": 0.0009674983504444117,
+      "test_roc_auc": 0.40716128672637597,
+      "base_rate": 0.0011080306725143488,
+      "passes_criteria": false
+    },
+    {
+      "permutation_seed": 202,
+      "trees": 18,
+      "test_pr_auc": 0.0007641242795454363,
+      "test_roc_auc": 0.3528472473313322,
+      "base_rate": 0.0011080306725143488,
+      "passes_criteria": false
+    },
+    {
+      "permutation_seed": 303,
+      "trees": 4,
+      "test_pr_auc": 0.0015624822112139483,
+      "test_roc_auc": 0.5059803070805284,
+      "base_rate": 0.0011080306725143488,
+      "passes_criteria": true
+    }
+  ],
+  "positive_control_real_labels": {
+    "test_pr_auc": 0.49123971641137226,
+    "test_roc_auc": 0.9819234695381569
+  },
+  "permuted_test_labels_with_real_model": {
+    "pr_auc": 0.0010726504167614167,
+    "roc_auc": 0.4956382745090606
+  }
+}

@@ -1,0 +1,109 @@
+[project]
+name = "aegis"
+version = "0.1.0"
+description = "Aegis-FI: evidence-grounded financial crime investigation (research)"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "pydantic>=2.7",
+  "pydantic-settings>=2.2",
+  "structlog>=24.1",
+  "python-ulid>=2.7",
+  "psycopg[binary]>=3.2",
+  "numpy>=2.5.4",
+  "pandas>=3.1.1",
+  "scikit-learn>=1.9.1",
+  "xgboost>=3.4.1",
+  "mlflow-skinny>=3.18.0",
+  "sqlalchemy>=2.1.8",
+  "alembic>=1.20.1",
+  "networkx>=3.7",
+  "langgraph>=1.2.20",
+  "langgraph-checkpoint-postgres>=3.2.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "pytest-cov>=5",
+    "hypothesis>=6.100",
+    "ruff>=0.5",
+    "mypy>=1.10",
+    "import-linter>=2.0",
+    "pandas-stubs>=3.1.0.261029",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aegis"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: needs a running Postgres (docker compose up)"]
+addopts = "-m 'not integration'"
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S", "BLE"]
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101"]
+"scripts/gen_e1_report.py" = ["E501"]  # report generator, long f-string tables
+"tests/integration/test_evidence_schema.py" = ["E501"]  # long SQL literals
+"tests/unit/test_evidence_domain.py" = ["E501"]
+
+[tool.mypy]
+strict = true
+plugins = ["pydantic.mypy"]
+files = ["src/aegis"]
+
+[tool.importlinter]
+root_package = "aegis"
+include_external_packages = true
+
+[[tool.importlinter.contracts]]
+name = "Layering"
+type = "layers"
+layers = ["aegis.ingestion", "aegis.store", "aegis.domain", "aegis.common"]
+
+[[tool.importlinter.contracts]]
+name = "Architecture layers (SYSTEM_ARCHITECTURE section 2)"
+type = "layers"
+layers = [
+  "aegis.services",
+  "aegis.runtime",
+  "aegis.capabilities",
+  "aegis.evidence : aegis.entities : aegis.llm : aegis.ml : aegis.analytics",
+  "aegis.store",
+  "aegis.domain",
+  "aegis.common",
+]
+
+[[tool.importlinter.contracts]]
+name = "Only aegis.llm may import the Anthropic SDK (D-16)"
+type = "forbidden"
+source_modules = [
+  "aegis.common", "aegis.domain", "aegis.store", "aegis.ingestion", "aegis.analytics",
+  "aegis.ml", "aegis.evidence", "aegis.entities", "aegis.capabilities", "aegis.runtime",
+  "aegis.services", "aegis.eval",
+]
+forbidden_modules = ["anthropic"]
+
+[[tool.importlinter.contracts]]
+name = "Capabilities never import each other (runtime composes)"
+type = "independence"
+modules = ["aegis.capabilities.*"]
+
+[[tool.importlinter.contracts]]
+name = "Feature and analytics code cannot reach labels (T-INV-14)"
+type = "forbidden"
+source_modules = ["aegis.analytics", "aegis.store.frames", "aegis.eval.splits"]
+forbidden_modules = ["aegis.domain.labels", "aegis.store.labels"]
+allow_indirect_imports = false
+
+[[tool.mypy.overrides]]
+module = ["sklearn.*", "xgboost.*", "mlflow.*", "networkx.*", "scipy.*"]
+ignore_missing_imports = true

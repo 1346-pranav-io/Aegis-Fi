@@ -1,0 +1,448 @@
+{
+  "result_files": {
+    "e8_20261112T082104Z.json": {
+      "sha256": "fc4b39910d4ff4a92bd6250a6eebb2416975946522c6672aad0ac9b1291e75c3"
+    },
+    "e8_analysis_20261112T082104Z.json": {
+      "sha256": "cfa5a9d66ad5b3aa894258d6e14716ab41085c5c2f4b64aabf3d0790ee9ab479"
+    },
+    "e1_20261111T170703Z.json": {
+      "sha256": "7a8cb7cecb97ebd160cd440a9238cba2a8cee5575484ee288884e2b6a67ecc2e"
+    },
+    "e9_20261112T195948Z.json": {
+      "sha256": "d52a6499a207426e036dc7f872b1686b6d4e1bbe5ad45afd9fe49aef4b902d55"
+    },
+    "p7_profile_20261112T200255Z.json": {
+      "sha256": "846976f3f832e2e4a94f7d78aa206833c839a3bd7670c33cc648ddba87199e51"
+    },
+    "p7_profile_20261112T200639Z.json": {
+      "sha256": "b2522f673a01e5c400d2440584b0e5416e303d49e41b24fbf71c6b69338d3f67"
+    }
+  },
+  "numbers": [
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "B1 mean PR-AUC",
+      "file": "e8_20261112T082104Z.json",
+      "path": "analysis.B1_xgboost.mean_pr_auc",
+      "printed": "0.4090",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "B1 intrinsic mean PR-AUC",
+      "file": "e8_20261112T082104Z.json",
+      "path": "analysis.B1_intrinsic.mean_pr_auc",
+      "printed": "0.0540",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "B0 mean PR-AUC",
+      "file": "e8_20261112T082104Z.json",
+      "path": "analysis.B0_rules.mean_pr_auc",
+      "printed": "0.0013",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "B1 mean CI width",
+      "file": "e8_20261112T082104Z.json",
+      "path": "analysis.B1_xgboost.mean_bootstrap_ci_width",
+      "printed": "0.0838",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "B1 seed SD",
+      "file": "e8_20261112T082104Z.json",
+      "path": "analysis.B1_xgboost.seed_sd_pr_auc_mean",
+      "printed": "0.0234",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "B1 SD of day means",
+      "file": "e8_20261112T082104Z.json",
+      "path": "analysis.B1_xgboost.sd_of_day_means",
+      "printed": "0.0424",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "B1 horizon 1 PR-AUC",
+      "file": "e8_analysis_20261112T082104Z.json",
+      "path": "b1_mean_pr_auc_by_horizon.1",
+      "printed": "0.4435",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "B1 horizon 7 PR-AUC",
+      "file": "e8_analysis_20261112T082104Z.json",
+      "path": "b1_mean_pr_auc_by_horizon.7",
+      "printed": "0.3060",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "validation PR-AUC origin 2",
+      "file": "e8_analysis_20261112T082104Z.json",
+      "path": "b1_validation_pr_auc_by_origin.o2",
+      "printed": "0.2978",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "validation PR-AUC origin 6",
+      "file": "e8_analysis_20261112T082104Z.json",
+      "path": "b1_validation_pr_auc_by_origin.o6",
+      "printed": "0.5317",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "within-origin spread origin 6",
+      "file": "e8_analysis_20261112T082104Z.json",
+      "path": "b1_within_origin_pr_auc_spread.o6.range",
+      "printed": "0.0555",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "within-origin spread origin 2",
+      "file": "e8_analysis_20261112T082104Z.json",
+      "path": "b1_within_origin_pr_auc_spread.o2.range",
+      "printed": "0.0829",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "within-day slope",
+      "file": "e8_20261112T082104Z.json",
+      "path": "analysis.B1_xgboost.horizon_trend.slope_per_day",
+      "printed": "-0.0534",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "within-day residual SD",
+      "file": "e8_20261112T082104Z.json",
+      "path": "analysis.B1_xgboost.horizon_trend.resid_sd",
+      "printed": "0.0716",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "spearman feature PSI vs delta",
+      "file": "e8_20261112T082104Z.json",
+      "path": "drift_vs_performance.spearman_psi_feature_mean_vs_delta",
+      "printed": "0.5075",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "spearman score PSI vs delta",
+      "file": "e8_20261112T082104Z.json",
+      "path": "drift_vs_performance.spearman_psi_score_vs_delta",
+      "printed": "-0.0545",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "spearman horizon vs delta",
+      "file": "e8_20261112T082104Z.json",
+      "path": "drift_vs_performance.spearman_horizon_vs_delta",
+      "printed": "-0.0826",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "n cells drift",
+      "file": "e8_20261112T082104Z.json",
+      "path": "drift_vs_performance.n",
+      "printed": "75",
+      "decimals": 0
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "raw ECE horizon 1",
+      "file": "e8_20261112T082104Z.json",
+      "path": "calibration_by_horizon.ece_raw_by_horizon.1",
+      "printed": "0.0438",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "raw ECE horizon 7",
+      "file": "e8_20261112T082104Z.json",
+      "path": "calibration_by_horizon.ece_raw_by_horizon.7",
+      "printed": "0.1117",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "calibrated/base h1",
+      "file": "e8_analysis_20261112T082104Z.json",
+      "path": "b1_mean_calibrated_over_base_rate_by_horizon.1",
+      "printed": "0.9379",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "calibrated/base h7",
+      "file": "e8_analysis_20261112T082104Z.json",
+      "path": "b1_mean_calibrated_over_base_rate_by_horizon.7",
+      "printed": "0.7672",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "B1 spearman block hit",
+      "file": "e8_analysis_20261112T082104Z.json",
+      "path": "within_system_spearman_prauc_vs_block_hit_1000.B1_xgboost",
+      "printed": "0.8876",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "B1 spearman account AP",
+      "file": "e8_analysis_20261112T082104Z.json",
+      "path": "within_system_spearman_prauc_vs_account_ap.B1_xgboost",
+      "printed": "0.9704",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "B1 block hit mean",
+      "file": "e8_20261112T082104Z.json",
+      "path": "h5a_rank_agreement.system_means.B1_xgboost.block_hit_1000",
+      "printed": "0.8073",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "intrinsic block hit mean",
+      "file": "e8_20261112T082104Z.json",
+      "path": "h5a_rank_agreement.system_means.B1_intrinsic.block_hit_1000",
+      "printed": "0.4887",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "B0 block hit mean",
+      "file": "e8_20261112T082104Z.json",
+      "path": "h5a_rank_agreement.system_means.B0_rules.block_hit_1000",
+      "printed": "0.0049",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E8_TEMPORAL.md",
+      "label": "block lines matched",
+      "file": "e8_20261112T082104Z.json",
+      "path": "block_lines_matched",
+      "printed": "3209",
+      "decimals": 0
+    },
+    {
+      "doc": "docs/research/E1_RESULTS_RUN1.md",
+      "label": "B0 test PR-AUC",
+      "file": "e1_20261111T170703Z.json",
+      "path": "systems.B0_rules.metrics.test.pr_auc",
+      "printed": "0.00122",
+      "decimals": 5
+    },
+    {
+      "doc": "docs/research/E1_RESULTS_RUN1.md",
+      "label": "B1 seed 11 validation PR-AUC",
+      "file": "e1_20261111T170703Z.json",
+      "path": "systems.B1_xgboost.runs.0.validation.pr_auc",
+      "printed": "0.5210",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E1_RESULTS_RUN1.md",
+      "label": "B1 seed 11 test PR-AUC",
+      "file": "e1_20261111T170703Z.json",
+      "path": "systems.B1_xgboost.runs.0.test.pr_auc",
+      "printed": "0.4912",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E1_RESULTS_RUN1.md",
+      "label": "B1 intrinsic test PR-AUC",
+      "file": "e1_20261111T170703Z.json",
+      "path": "systems.B1_intrinsic_only.test.pr_auc",
+      "printed": "0.0535",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E1_RESULTS_RUN1.md",
+      "label": "test positives",
+      "file": "e1_20261111T170703Z.json",
+      "path": "parts.test.pos",
+      "printed": "956",
+      "decimals": 0
+    },
+    {
+      "doc": "docs/research/E9_GNN.md",
+      "label": "G2 mean",
+      "file": "e9_20261112T195948Z.json",
+      "path": "variants.G2_gnn_all_features.test_pr_auc_mean",
+      "printed": "0.4677",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E9_GNN.md",
+      "label": "G2 sd",
+      "file": "e9_20261112T195948Z.json",
+      "path": "variants.G2_gnn_all_features.test_pr_auc_sd",
+      "printed": "0.0109",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E9_GNN.md",
+      "label": "G0 mean",
+      "file": "e9_20261112T195948Z.json",
+      "path": "variants.G0_head_all_features_no_graph.test_pr_auc_mean",
+      "printed": "0.4507",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E9_GNN.md",
+      "label": "G0 sd",
+      "file": "e9_20261112T195948Z.json",
+      "path": "variants.G0_head_all_features_no_graph.test_pr_auc_sd",
+      "printed": "0.0267",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E9_GNN.md",
+      "label": "G1 mean",
+      "file": "e9_20261112T195948Z.json",
+      "path": "variants.G1_gnn_intrinsic_features.test_pr_auc_mean",
+      "printed": "0.0698",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E9_GNN.md",
+      "label": "G1 sd",
+      "file": "e9_20261112T195948Z.json",
+      "path": "variants.G1_gnn_intrinsic_features.test_pr_auc_sd",
+      "printed": "0.0055",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E9_GNN.md",
+      "label": "G0i mean",
+      "file": "e9_20261112T195948Z.json",
+      "path": "variants.G0i_head_intrinsic_features_no_graph.test_pr_auc_mean",
+      "printed": "0.0200",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E9_GNN.md",
+      "label": "G0i sd",
+      "file": "e9_20261112T195948Z.json",
+      "path": "variants.G0i_head_intrinsic_features_no_graph.test_pr_auc_sd",
+      "printed": "0.0015",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E9_GNN.md",
+      "label": "B1 reference mean",
+      "file": "e9_20261112T195948Z.json",
+      "path": "reference_e1.b1_test_pr_auc_mean",
+      "printed": "0.4901",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E9_GNN.md",
+      "label": "B1 reference sd",
+      "file": "e9_20261112T195948Z.json",
+      "path": "reference_e1.b1_test_pr_auc_sd",
+      "printed": "0.0102",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/E9_GNN.md",
+      "label": "B1 intrinsic reference",
+      "file": "e9_20261112T195948Z.json",
+      "path": "reference_e1.b1_intrinsic_test_pr_auc",
+      "printed": "0.0535",
+      "decimals": 4
+    },
+    {
+      "doc": "docs/research/P7_HARDENING.md",
+      "label": "load before",
+      "file": "p7_profile_20261112T200255Z.json",
+      "path": "load_transactions_total_s",
+      "printed": "42.7",
+      "decimals": 1
+    },
+    {
+      "doc": "docs/research/P7_HARDENING.md",
+      "label": "copy before",
+      "file": "p7_profile_20261112T200255Z.json",
+      "path": "sql_copy_s",
+      "printed": "20.7",
+      "decimals": 1
+    },
+    {
+      "doc": "docs/research/P7_HARDENING.md",
+      "label": "parse before",
+      "file": "p7_profile_20261112T200255Z.json",
+      "path": "csv_parse_s",
+      "printed": "4.1",
+      "decimals": 1
+    },
+    {
+      "doc": "docs/research/P7_HARDENING.md",
+      "label": "factorize before",
+      "file": "p7_profile_20261112T200255Z.json",
+      "path": "factorize_s",
+      "printed": "2.3",
+      "decimals": 1
+    },
+    {
+      "doc": "docs/research/P7_HARDENING.md",
+      "label": "features before",
+      "file": "p7_profile_20261112T200255Z.json",
+      "path": "build_features_s",
+      "printed": "19.5",
+      "decimals": 1
+    },
+    {
+      "doc": "docs/research/P7_HARDENING.md",
+      "label": "queue p50 limit500",
+      "file": "p7_profile_20261112T200255Z.json",
+      "path": "api_queue_limit500.p50_ms",
+      "printed": "30.9",
+      "decimals": 1
+    },
+    {
+      "doc": "docs/research/P7_HARDENING.md",
+      "label": "queue p50 limit100",
+      "file": "p7_profile_20261112T200255Z.json",
+      "path": "api_queue_limit100.p50_ms",
+      "printed": "33.0",
+      "decimals": 1
+    },
+    {
+      "doc": "docs/research/P7_HARDENING.md",
+      "label": "load after",
+      "file": "p7_profile_20261112T200639Z.json",
+      "path": "load_transactions_total_s",
+      "printed": "32.8",
+      "decimals": 1
+    },
+    {
+      "doc": "docs/research/P7_HARDENING.md",
+      "label": "copy after",
+      "file": "p7_profile_20261112T200639Z.json",
+      "path": "sql_copy_s",
+      "printed": "17.7",
+      "decimals": 1
+    }
+  ]
+}

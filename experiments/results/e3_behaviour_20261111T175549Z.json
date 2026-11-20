@@ -1,0 +1,56 @@
+{
+  "n_rows": 6340,
+  "groups": {
+    "block": {
+      "accounts": 3170,
+      "insufficient_history_share": 0.5735015772870662,
+      "ok_accounts": 1352,
+      "median_z_out_count": -0.4554910373604457,
+      "median_z_in_count": -0.7221889279045306,
+      "median_new_counterparty_share": 0.4,
+      "median_z_log_amount_mean": 0.341570485514683,
+      "median_peer_percentile_of_test_count": 0.8499971547716649
+    },
+    "control": {
+      "accounts": 3170,
+      "insufficient_history_share": 0.5138801261829653,
+      "ok_accounts": 1541,
+      "median_z_out_count": -0.5616280253582795,
+      "median_z_in_count": -1.1057977419485614,
+      "median_new_counterparty_share": 0.0,
+      "median_z_log_amount_mean": -0.2763459193777151,
+      "median_peer_percentile_of_test_count": 0.6821269390217793
+    }
+  },
+  "auc_among_sufficient_history": {
+    "z_out_count": {
+      "auc_block_vs_control": 0.5624042445349788,
+      "n": 2893,
+      "n_block": 1352
+    },
+    "z_in_count": {
+      "auc_block_vs_control": 0.574842615453732,
+      "n": 2893,
+      "n_block": 1352
+    },
+    "new_counterparty_share": {
+      "auc_block_vs_control": 0.9277133923768537,
+      "n": 2892,
+      "n_block": 1352
+    },
+    "z_log_amount_mean": {
+      "auc_block_vs_control": 0.6431824988768532,
+      "n": 2893,
+      "n_block": 1352
+    },
+    "peer_percentile_of_test_count": {
+      "auc_block_vs_control": 0.6537527982674741,
+      "n": 2893,
+      "n_block": 1352
+    }
+  },
+  "auc_peer_percentile_all_accounts": {
+    "auc": 0.6296549871130173,
+    "n": 6340
+  }
+}
